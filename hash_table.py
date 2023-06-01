@@ -1,3 +1,4 @@
+# Class with hash table
 class HashTable:
     def __init__(self, initial_capacity=20):
         self.buckets = []

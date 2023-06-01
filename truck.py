@@ -1,6 +1,7 @@
 from utils import TimeInSeconds
 
 
+# Class for trucks
 class Truck:
     def __init__(self, distMatrix, timeMatrix, startTime=28800):
         self.packages = []
@@ -10,9 +11,11 @@ class Truck:
         self.distMatrix = distMatrix
         self.timeMatrix = timeMatrix
 
+    # Loads packages
     def loadPackages(self, packages):
         self.packages = packages
 
+    # Nearest neighbor algorithm is implemented
     def travelRoute(self):
         for package in self.packages:
             package.pickupTime = self.internalClock

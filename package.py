@@ -1,3 +1,4 @@
+# Class for packages
 class Package:
     def __init__(self, id, address, city, state, zipcode, deadline, weight):
         self.id = id
@@ -11,6 +12,7 @@ class Package:
         self.pickupTime = -1
         self.deliveryTime = -1
 
+    # Updates status based on time inputted
     def getStatusAtTime(self, current_time):
         if self.deliveryTime is -1:
             return "At the hub"

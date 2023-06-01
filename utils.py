@@ -1,3 +1,4 @@
+# Class for time in seconds and int time
 class TimeInSeconds:
     def toInt(strTime):
         strHrs, strMins, strSecs = strTime.split(":")

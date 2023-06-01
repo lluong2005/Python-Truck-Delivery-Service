@@ -128,9 +128,6 @@ truck3Packages.append(PACKAGE_HASH_TABLE.lookup(PACKAGE_PRIORITIES[3][0]))
 TRUCK_3.loadPackages(truck3Packages)
 TRUCK_3.travelRoute()
 
-# for package in PACKAGES:
-#     print(f"package: {package.id} was delivered to {package.address}, {package.city}, {package.state} at {package.deliveryTime} and was picked up from the hub at {package.pickupTime}")
-
 
 def parse_time_string(time_string):
     try:
