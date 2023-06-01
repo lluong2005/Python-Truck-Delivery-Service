@@ -1,4 +1,4 @@
-class DiffMatrix():
+class DiffMatrix:
     def __init__(self):
         self.size = 0
         self.matrix = [[]]

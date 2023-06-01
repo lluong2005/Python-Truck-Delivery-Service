@@ -1,4 +1,4 @@
-class TimeInSeconds():
+class TimeInSeconds:
     def toInt(strTime):
         strHrs, strMins, strSecs = strTime.split(":")
         intHrs = int(strHrs) * 3600
@@ -8,8 +8,8 @@ class TimeInSeconds():
         return intTime
 
     def fromInt(intTime):
-        intHrs = intTime // 3600
-        intMins = (intTime % 3600) // 60
-        intSecs = (intTime % 3600 % 60)
-        strTime = f"{intHrs :02}:{intMins :02}:{intSecs :02}"
+        intHrs = int(intTime // 3600)
+        intMins = int((intTime % 3600) // 60)
+        intSecs = int((intTime % 3600 % 60))
+        strTime = f"{intHrs}:{intMins :02}"
         return strTime
