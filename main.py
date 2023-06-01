@@ -173,11 +173,20 @@ if __name__ == "__main__":
                 print("Zip code:", package.zipcode)
                 print("Deadline:", package.deadline)
                 print("Weight:", package.weight)
-                print(
-                    "Status:",
-                    package.getStatusAtTime(current_time_seconds),
-                    Truck.convert_seconds_to_time(package.deliveryTime),
-                )
+                if package.getStatusAtTime(current_time_seconds) == "Delivered":
+                    print(
+                        "Status:",
+                        package.getStatusAtTime(current_time_seconds),
+                        "to",
+                        f"{package.address},",
+                        f"{package.city},",
+                        f"{package.state},",
+                        "at",
+                        TimeInSeconds.fromInt(package.deliveryTime),
+                    )
+                else:
+                    print("Status:", package.getStatusAtTime(current_time_seconds))
+                print("")
 
             else:
                 print("Package not found.")
