@@ -34,9 +34,9 @@ PACKAGE_PRIORITIES = [
         37,
         40,
         19,
+        25,
     ],  # *First truck. Truck then pulls from 3
     [
-        25,
         28,
         32,
         36,
